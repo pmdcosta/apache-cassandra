@@ -35,11 +35,11 @@ A `kubernetes/config/build.cql` file can be changed to contain default Cassandra
 kubectl create -f kubernetes/cassandra.yaml
 
 # Validate the Cassandra cluster.
-./kubernetes/nodetool.sh
+./kubernetes/build/nodetool.sh
 
 # Scale up the Cassandra cluster
 kubectl scale rc cassandra --replicas=3
 
 # Create Namespaces and tables
-./kubernetes/build.sh
+./kubernetes/build/build.sh
 ```
